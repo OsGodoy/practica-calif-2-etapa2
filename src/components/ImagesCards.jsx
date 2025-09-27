@@ -12,6 +12,7 @@ export default function ImagesCards({ data, isLoading }) {
                 className="h-full w-full object-cover drop-shadow-md"
                 src={foto.src.original}
                 alt=""
+                loading="lazy"
               />
             </li>
           ))
