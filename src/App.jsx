@@ -17,7 +17,7 @@ export default function App() {
           `https://api.pexels.com/v1/search?query=${filter}&per_page=12&orientation=square`,
           {
             headers: {
-              Authorization: import.meta.env.API_KEY,
+              Authorization: import.meta.env.PEXELS_API_KEY,
             },
           }
         );
