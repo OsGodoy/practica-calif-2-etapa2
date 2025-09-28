@@ -7,7 +7,7 @@ import Header from "./components/Header";
 export default function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [filter, setFilter] = useState("Food");
+  const [filter, setFilter] = useState("food");
 
   useEffect(() => {
     async function fetchData() {
@@ -39,13 +39,9 @@ export default function App() {
     >
       <Header />
       <main className="w-80 p-4 pb-8 sm:pb-4 gap-4 flex flex-col items-center justify-between">
-        <Search />
-        <Filter
-          setFilter={setFilter}
-          setImages={setImages}
-          setIsLoading={setIsLoading}
-        />
-        <div className="font-bold text-sky-700 text-3xl flex items-center justify-center p-2">{`${filter} Pictures`}</div>
+        <Search setFilter={setFilter} />
+        <Filter setFilter={setFilter} />
+        <div className="font-bold text-sky-700 text-3xl flex items-center justify-center p-2 capitalize">{`${filter} Pictures`}</div>
         <ImagesCards data={images} isLoading={isLoading} />
       </main>
     </div>
