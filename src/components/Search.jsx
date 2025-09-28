@@ -23,7 +23,10 @@ export default function Search({ setFilter }) {
               }
             }}
           />
-          <button onClick={() => setFilter(inputValue)}>
+          <button
+            className="cursor-pointer"
+            onClick={() => setFilter(inputValue)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
